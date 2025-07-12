@@ -1,0 +1,26 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Simulate code validation
+      run: |
+        echo "Simulating code validation..."
+        # You can replace this with a more specific check,
+        # for example, checking for a specific file or running a simple script.
+        echo "Todo correcto - Placeholder for actual code validation."
+        # Example: If you have an index.html and want to ensure it exists
+        # if [ ! -f "index.html" ]; then
+        #   echo "Error: index.html not found!"
+        #   exit 1
+        # fi
